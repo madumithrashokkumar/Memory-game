@@ -1,0 +1,40 @@
+:root {
+  --bg-primary: #fdfdfd;
+  --border-radius: 0.75rem;
+  --color-primary: #ff6f61;
+  --color-accent: #42a5f5;
+  --color-success: #66bb6a;
+  --transition: all 0.2s ease;
+}
+
+.container {
+  background: var(--bg-primary);
+  color: #333;
+  min-height: 100vh;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.button {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
+.button:hover { background: #ffb300; }
+
+.icon { color: var(--color-accent); transition: var(--transition); }
+.icon:hover { color: var(--color-success); }
+
+.rocket { position: absolute; transition: transform var(--transition); }
+
+.star { position: absolute; width: 1.2rem; height: 1.2rem; background: var(--color-success); border-radius: 50%; box-shadow: 0 0 8px var(--color-success); animation: pop 0.3s ease-out; }
+@keyframes pop { 0% { transform: scale(0.5); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
